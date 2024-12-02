@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 class stack{
-    public:
+    public:  //use of public first so that less dependency on this-> notation
     int capacity;
     int top;
     int *arr;
