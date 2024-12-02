@@ -14,18 +14,18 @@ class stack{
     Node*head;
     int capacity;
     int curr_size;
-    stack(int c){
+    stack(int c){ // giving stack capacity
         capacity=c;
         curr_size=0;
         head=NULL;
     }
-    bool isEmpty(){
+    bool isEmpty(){ //checking is stack empty or not
         return this->head==NULL;
     }
-    bool isFull(){
+    bool isFull(){ // checking stack is full or not
         return this->curr_size==this->capacity;
     }
-    void push(int data){
+    void push(int data){ //pushing element in stack
         if(this->curr_size==this->capacity) {
             cout<<"Overflow\n";
             return;
@@ -34,7 +34,7 @@ class stack{
         new_node->next=head;
         head=new_node;
     }
-    void pop(){
+    void pop(){   //removing element from stack
         if(this->head==NULL){
             cout<<"underflow\n";
             return;
@@ -44,7 +44,7 @@ class stack{
         delete head;
         head=new_node;
     }
-    int getTop(){
+    int getTop(){  //fetching top element of the stack
         if(this->head==NULL){
             cout<<"underflow\n";
             return -1;
